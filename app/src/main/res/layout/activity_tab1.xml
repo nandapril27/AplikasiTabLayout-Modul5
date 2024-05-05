@@ -2,13 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="15dp"
-        android:text="HALAMAN TAB KE-1"
-        android:textSize="18dp"/>
+        android:text="SELAMAT DATANG"
+        android:textSize="20sp"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="DI WEBSITE UNIVERSITAS KUNINGAN"
+        android:textSize="18sp"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/uniku"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Universitas Kuningan (Uniku) didirikan pada tahun 1984 sebagai Sekolah Tinggi Ilmu Ekonomi (STIE) Kuningan. Pada tahun 2003, STIE Kuningan berkembang menjadi Universitas Kuningan. Uniku fokus pada peningkatan kualitas pendidikan dan pengajaran dengan kurikulum yang relevan dengan kebutuhan industri. Selain itu, Uniku juga aktif dalam penelitian dan pengabdian kepada masyarakat untuk memberikan kontribusi pada pembangunan daerah."
+        android:textSize="14sp"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="50dp"
+        android:gravity="start|center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Mendampingi, Melayani dan Memberi Yang Terbaik"
+        android:textSize="14sp"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"/>
+
 </LinearLayout>

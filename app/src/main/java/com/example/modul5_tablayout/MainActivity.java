@@ -21,14 +21,7 @@ import android.widget.TabHost.TabSpec;
 public class MainActivity extends TabActivity implements TextWatcher {
 
     private AutoCompleteTextView ac;
-    private EditText lv;
-    public String[] stringdatafak = {
-            "Prodi Teknik Informatika (S1)",
-            "Prodi Sistem Informasi (S1)",
-            "Prodi Management Informatika (D3)",
-            "Prodi Desain Komunikasi Visual (S1)",
-            "Prodi Teknik Sipil (S1)"
-    };
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,7 +32,7 @@ public class MainActivity extends TabActivity implements TextWatcher {
         ac = findViewById(R.id.dataautocomplete);
         if (ac != null) {
             ac.addTextChangedListener(this);
-            ac.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, stringdatafak));
+            ac.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line));
         }
 
         TabHost tabHost = getTabHost();
@@ -47,15 +40,6 @@ public class MainActivity extends TabActivity implements TextWatcher {
         setNewTab(this, tabHost, "tab2", "FAKULTAS", R.drawable.ic_launcher_background, new Intent(this, Tab2.class));
         setNewTab(this, tabHost, "tab3", "PROGRAM STUDI", R.drawable.ic_launcher_background, new Intent(this, Tab3.class));
 
-        lv = findViewById(R.id.datalistview);
-        if (lv != null) {
-            lv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    pilihfakultas(v);
-                }
-            });
-        }
     }
 
     private void setNewTab(Context context, TabHost tabHost, String tag, String title, int icon, Intent intentid){
@@ -65,18 +49,7 @@ public class MainActivity extends TabActivity implements TextWatcher {
         tabHost.addTab(tabSpec);
     }
 
-    public void pilihfakultas(View v) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Data Program Studi - Fakultas Ilmu Komputer \n Universitas Kuningan");
-        builder.setItems(stringdatafak, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int item) {
-                if (lv != null) {
-                    lv.setText(stringdatafak[item]);
-                    dialog.dismiss();
-                }
-            }
-        }).show();
-    }
+
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {}
